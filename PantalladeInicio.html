@@ -1,0 +1,52 @@
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+	<link rel="stylesheet" type="text/css"	href="C:\xampp\htdocs\bootstrap2\css\bootstrap.min.css">
+    <link rel="stylesheet" href="Estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/animejs"></script>
+    <title>PrimoCachiporra</title>
+</head>
+<body>
+    <div class="container">
+        <h1>PRIMO CACHIPORRA</h1>
+        <button onclick="redirect()">Ingresar</button>
+    </div>
+    <script>
+         anime({
+            targets: 'body',
+            backgroundColor: 'white', // Cambia al color final de fondo
+            easing: 'easeInOutQuad',
+            duration: 1000,
+        });
+
+        anime({
+            targets: '.slide',
+            opacity: 1, // Hace que el contenedor sea visible
+            easing: 'easeInOutQuad',
+            duration: 1000,
+        });
+
+        // Función de redirección
+        function redirect() {
+            anime({
+                targets: 'body',
+                backgroundColor: 'black',
+                easing: 'easeInOutQuad',
+                duration: 500,
+            });
+
+            anime({
+                targets: '.container',
+                opacity: 0,
+                easing: 'easeInOutQuad',
+                duration: 500,
+                complete: function() {
+                    window.location.href = 'PRIMOCACHIPORRA.html';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
